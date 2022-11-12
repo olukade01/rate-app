@@ -5,22 +5,20 @@ const RepositoryItem = ({
   fullName,
   description,
   language,
-  forks,
-  stars,
-  reviews,
-  rating,
+  forksCount,
+  stargazersCount,
+  ratingAverage,
+  reviewCount,
 }) => (
-  <Text>
-    {JSON.stringify(
-      description,
-      fullName,
-      language,
-      forks,
-      stars,
-      reviews,
-      rating
-    )}
-  </Text>
+  <View style={{ marginBottom: 15 }}>
+    <Text>Full name: {fullName}</Text>
+    <Text>Description: {description}</Text>
+    <Text>Language: {language}</Text>
+    <Text>Forks: {forksCount}</Text>
+    <Text>Stars: {stargazersCount}</Text>
+    <Text>Rating: {ratingAverage}</Text>
+    <Text>Reviews: {reviewCount}</Text>
+  </View>
 );
 
 export default RepositoryItem;
